@@ -1,0 +1,22 @@
+{
+  "welcomeFile": "quickui/webapp/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/app-logout",
+    "logoutPage": "/"
+  },
+  "routes": [
+    {
+      "source": "^/quickui/webapp/(.*)$",
+      "target": "$1",
+      "localDir": "quickui/webapp/",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "destination": "srv-api",
+      "csrfProtection": true
+    }
+  ]
+}

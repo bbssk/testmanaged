@@ -1,0 +1,34 @@
+{
+  "requires": {
+    "auth": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "73a11e94trial",
+          "space": "dev",
+          "instance": "quick-xsuaa-service",
+          "key": "uaa_quick-key"
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "auth"
+        }
+      },
+    "[hybrid]": {
+      "auth": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "73a11e94trial",
+          "space": "dev",
+          "instance": "quick-xsuaa-service",
+          "key": "uaa_quick-key"
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "auth"
+        }
+      }
+    }
+  }
+}
